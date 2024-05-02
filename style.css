@@ -67,43 +67,61 @@ main {
 }
 
 .dashboard-item {
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 1vw;
-    border: 2px greenyellow;
     padding: 1vw;
     display: flex;
-    flex-direction: row;
-}
-.calendar-widget{
-    width: 20vw;
-    background-size: cover;
-}
-.img-calendar{
-   height: 15vw;
-   width: 19vw;
-}
-.img-todo-list{
-    height: 100%;
-    width: 100%;
+    width: 15vw;
+    height: 15vw;
 
+    flex-direction: row;
 }
 
 .dashboard{
     padding: 1vw;
     width: 75vw;
     height: 75vh;
-    background-color: #d8d8d8;
+    background-color: #c4c4c4;
     border-radius: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+
+}
+.section-1{
+    width: 75vw;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.section-2{
+    width: 75vw;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.img-calendar,.img-todo-list,.img-emails,.img-notifications,.img-budget-tracker,.img-class{
+    width: 12vw;
+}
+.calendar-widget,.todo-list,.emails,.notifications,.budget-tracker,.notes{
+    width: 20vw;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.notifications{
+    margin-left: 10px;
 }
 .side-bar{
     width: 20vw;
     height: 94.2vh;
-    background-color: #c5c5c5;
+    background-color: #c6c5c5;
     z-index: 45;
     position: absolute;
     display: flex;
@@ -117,7 +135,7 @@ main {
     align-items: center;
     justify-content: center;
     background-color: white;
-    opacity: 0.80;
+    opacity: 0.90;
     flex-direction: column;
     align-items: flex-end;
     border-bottom: 1px solid black;
@@ -136,7 +154,6 @@ main {
 
 .dashboard-item h2 {
     border-bottom: 1px solid #ccc;
-    padding-left: 2vw;
 }
 h4{
     font-weight: bold;
