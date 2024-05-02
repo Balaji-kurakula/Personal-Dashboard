@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    height: 7vh;
+    width: 83vw;
+    display: flex;
+    align-items: center;
+    margin-right: 0vw;
+    justify-content: space-between;
+    border-radius: 0px 0px 10px 0px;
+    margin-left: 15.5vw;
+}
+
+.dashboard-lists{
+    height: 7vh;
+    width: 50vw;
+    display: flex;
+    justify-content: flex-start;
+    gap: 4vw;
+    align-items: center;
+    align-content: center;
+}
+i{
+    align-self: center;
+    padding-right: 1vw;
+}
+.calendar,.todo-list,.notifications,.emails,.Budget-Tracker,.notes,.user,.dashboard-icon{
+    display:flex;
+    flex-direction: row;
+    width: 2vw;
+    align-items: flex-end;
+}
+.side-bar-calendar,.side-bar-todo-list,.side-bar-notifications,.side-bar-emails,.side-bar-Budget-Tracker,.side-bar-notes,.side-bar-dashboard{
+    display:flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    width: 18vw;
+}
+.dashboard-item h2{
+    margin-top: 0px;
+    padding-top: 0px;
+}
+header h2 {
+    margin: 0;
+    padding-left: 10vw;
+}
+.user{
+    font-size:xx-large;
+}
+.notifications{
+    margin-left: 4vw;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.dashboard-item {
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 1vw;
+    border: 2px greenyellow;
+    padding: 1vw;
+    display: flex;
+    flex-direction: row;
+}
+.calendar-widget{
+    width: 20vw;
+    background-size: cover;
+}
+.img-calendar{
+   height: 15vw;
+   width: 19vw;
+}
+.img-todo-list{
+    height: 100%;
+    width: 100%;
+
+}
+
+.dashboard{
+    padding: 1vw;
+    width: 75vw;
+    height: 75vh;
+    background-color: #d8d8d8;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.side-bar{
+    width: 20vw;
+    height: 94.2vh;
+    background-color: #c5c5c5;
+    z-index: 45;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.side-bar-items{
+    width: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    opacity: 0.80;
+    flex-direction: column;
+    align-items: flex-end;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    border-radius: 10%;
+
+}
+
+.logo{
+    width: 13vw;
+    height: 20vh;
+    border-radius: 10px;
+    margin: 40px;
+    margin-top: 30px;
+}
+
+.dashboard-item h2 {
+    border-bottom: 1px solid #ccc;
+    padding-left: 2vw;
+}
+h4{
+    font-weight: bold;
+    color: #000000;
+}
+footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    margin: 0%;
+}
+
+footer p {
+    margin: 0%;
+}
