@@ -9,13 +9,13 @@ header {
     color: #fff;
     padding: 10px;
     height: 7vh;
-    width: 83vw;
+    width: 82.8vw;
     display: flex;
     align-items: center;
     margin-right: 0vw;
     justify-content: space-between;
     border-radius: 0px 0px 10px 0px;
-    margin-left: 15.5vw;
+    margin-left: 15.8vw;
 }
 
 .dashboard-lists{
@@ -27,22 +27,45 @@ header {
     align-items: center;
     align-content: center;
 }
-i{
+i,a{
     align-self: center;
     padding-right: 1vw;
+    cursor: pointer;
+    color: #ffffff;
 }
-.calendar,.todo-list,.notifications,.emails,.Budget-Tracker,.notes,.user,.dashboard-icon{
+.calendar,.todo-list,.notifications,.emails,.Budget-Tracker,.notes,.user,.dashboard-icon,.menu-icon{
     display:flex;
     flex-direction: row;
-    width: 2vw;
+    width: 1.5vw;
     align-items: flex-end;
+}
+
+.menu-icon{
+    z-index: 10;
+    display: none;
 }
 .side-bar-calendar,.side-bar-todo-list,.side-bar-notifications,.side-bar-emails,.side-bar-Budget-Tracker,.side-bar-notes,.side-bar-dashboard{
     display:flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
-    width: 18vw;
+    width: 100%;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.side-bar-items i{
+    color: #000000;
+}
+.side-bar-items i:hover,.side-bar-items h4:hover{
+    color: #878787;
+}
+.dashboard-lists i:hover,.dashboard-lists a:hover{
+    color: #878787;
+}
+
+.side-bar-items div .active:hover,.side-bar-items div:hover{
+    font-weight: #ffffff;
 }
 .dashboard-item h2{
     margin-top: 0px;
@@ -54,11 +77,8 @@ header h2 {
 }
 .user{
     font-size:xx-large;
+    margin-right: 2vw;
 }
-.notifications{
-    margin-left: 4vw;
-}
-
 main {
     display: flex;
     flex-wrap: wrap;
@@ -73,10 +93,10 @@ main {
     margin: 1vw;
     padding: 1vw;
     display: flex;
-    width: 15vw;
-    height: 15vw;
-
+    width: 18vw;
+    height: 30vh;
     flex-direction: row;
+    cursor: pointer;
 }
 
 .dashboard{
@@ -86,6 +106,8 @@ main {
     background-color: #c4c4c4;
     border-radius: 10px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     gap: 2vw;
 
@@ -104,8 +126,21 @@ main {
     align-items: center;
     justify-content: space-evenly;
 }
-.img-calendar,.img-todo-list,.img-emails,.img-notifications,.img-budget-tracker,.img-class{
+.img-calendar,.img-notifications{
     width: 12vw;
+    height: auto;
+}
+.img-class{
+    width: 14vw;
+    height: auto;
+}
+.img-todo-list{
+    width: 15vw;
+    height: 22vh;
+}
+.img-emails,.img-budget-tracker{
+    width: 15vw;
+    height: auto;
 }
 .calendar-widget,.todo-list,.emails,.notifications,.budget-tracker,.notes{
     width: 20vw;
@@ -120,13 +155,12 @@ main {
 }
 .side-bar{
     width: 20vw;
-    height: 94.2vh;
-    background-color: #c6c5c5;
-    z-index: 45;
+    height: 95.2vh;
+    background-color: #000000;
+    z-index: 45;    
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
 }
 .side-bar-items{
@@ -134,13 +168,14 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     opacity: 0.90;
     flex-direction: column;
     align-items: flex-end;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
     border-radius: 10%;
+    cursor: pointer;
 
 }
 
@@ -153,10 +188,13 @@ main {
 
 .dashboard-item h2 {
     border-bottom: 1px solid #ccc;
+    text-decoration: none;
+    color: #000000;
 }
 h4{
     font-weight: bold;
     color: #000000;
+    text-decoration: none;
 }
 footer {
     background-color: #000000;
@@ -164,8 +202,288 @@ footer {
     padding: 5px;
     text-align: center;
     margin: 0%;
+    height: 3vh;
+    width: 100%;
+    margin-top: auto;
+
 }
 
 footer p {
     margin: 0%;
 }
+@media only screen and (max-width:1200px){
+    .menu-icon{
+        z-index: 10;
+        cursor: pointer;
+        padding-left: 6vw;
+        display: inline;
+        font-size: x-large;
+    }
+    .side-bar{
+        overflow: hidden;
+        transition: 0.2s;
+        position: absolute;
+        display: none;
+        height: 100vh;
+        width: 25vw;
+    }
+    header {
+        padding: 10px;
+        height: 7vh;
+        width: 98vw;
+        display: flex;
+        align-items: center;
+        margin-right: 0vw;
+        justify-content: space-between;
+        border-radius: 0px 0px 10px 0px;
+        margin-left: 0vw;
+    }
+    header h2 {
+        margin: 0;
+        padding-left: 0vw;
+    }
+    main {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        height: 90vh;
+        width: 97vw;
+        align-items: center;
+        justify-content: center;
+    }
+    .dashboard{
+        padding: 1vw;
+        width: 90vw;
+        height: 80vh;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+    .section-1{
+        width: 80vw;
+        height: 40vh;
+    }
+    .section-2{
+        width: 80vw;
+        height: 40vh;
+    }
+    .dashboard-item {
+        width: 20vw;
+        height: 20vw;
+        flex-direction: row;
+    }
+    .img-calendar,.img-todo-list,.img-emails,.img-notifications,.img-budget-tracker,.img-class{
+        width: 15vw;
+        height: auto;
+    }
+    .calendar-widget,.todo-list,.emails,.notifications,.budget-tracker,.notes{
+        width: 25vw;
+    }
+    .notifications{
+        margin-left: 8px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .dashboard-item {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 1vw;
+        padding: 1vw;
+        display: flex;
+        width: 20vw;
+        height: 25vh;
+        flex-direction: row;
+    }
+    .section-1{
+        width: 80vw;
+        height: 35vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .section-2{
+        width: 80vw;
+        height: 35vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .img-calendar,.img-notifications{
+        width: 13vw;
+        height: auto;
+    }
+    .img-class{
+        width: 15vw;
+        height: auto;
+    }
+    .img-todo-list,.img-emails,.img-budget-tracker{
+        width: 15vw;
+        height: auto;
+    }
+    .calendar-widget,.todo-list,.emails,.notifications,.budget-tracker,.notes{
+        width: 20vw;
+    }
+    .notifications{
+        margin-left: 10px;
+    }
+
+  }
+
+
+  @media only screen and (max-width:750px){
+    
+    .dashboard-lists{
+        display: none;
+    }
+    .user{
+        display: flex;
+    }
+    header h2 {
+        margin: 0;
+        margin-right: 35vw;
+    }
+    .dashboard-item {
+        display: flex;
+        width: 40vw;
+        height: 28vh;
+        margin-top: 2vh;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dashboard{
+        padding: 1vw;
+        width: 80vw;
+        height: auto;
+        background-color: #c4c4c4;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2vw;
+
+    }
+    .section-1{
+        width: 75vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .section-2{
+        width: 75vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .img-calendar,.img-notifications{
+        width: 21vw;
+        height: 20vh;
+    }
+    .img-class{
+        width: 25vw;
+        height: 20vh;
+    }
+    .img-budget-tracker{
+        width: 23vw;
+        height: auto;
+    }
+    .img-todo-list,.img-emails{
+        width: 27vw;
+        height: 20vh;
+    }
+    .calendar-widget,.todo-list,.emails,.notifications,.budget-tracker,.notes{
+        width: 20vw;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .notifications{
+        margin-left: 10px;
+    }
+    h2{
+        padding-top: 2vw;
+        width: 35vw;
+    }
+    header h2 {
+        margin: 0;
+        margin-right: 20vw;
+        width: 45vw;
+    }
+  }
+
+  @media only screen and (max-width:500px){
+    
+    
+    .dashboard-item {
+        width: 50vw;
+        height: 25vh;
+        margin-top: 2vh;
+    }
+
+    .dashboard{
+        padding: 1vw;
+        width: 80vw;
+        height: auto;
+        background-color: #c4c4c4;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2vw;
+
+    }
+    .section-1{
+        width: 75vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .section-2{
+        width: 75vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .img-calendar,.img-notifications{
+        width: 26vw;
+        height: 18vh;
+        padding: 1px;
+    }
+    .img-class{
+        width: 26vw;
+        height: auto;
+    }
+    .img-budget-tracker{
+        width: 25vw;
+        height: auto;
+    }
+    .img-todo-list,.img-emails{
+        width: 28vw;
+        height: auto;
+    }
+    h2{
+        padding-top: 1vw;
+        width: 35vw;
+    }
+    header h2 {
+        margin: 0;
+        margin-right: 20vw;
+        width: 50vw;
+    }
+  }
