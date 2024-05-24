@@ -110,6 +110,7 @@ main {
     justify-content: center;
     flex-direction: column;
     gap: 2vw;
+    margin-bottom: 2vh;
 
 }
 .section-1{
@@ -128,11 +129,11 @@ main {
 }
 .img-calendar,.img-notifications{
     width: 12vw;
-    height: auto;
+    height: 22vh;
 }
 .img-class{
     width: 14vw;
-    height: auto;
+    height: 22vh;
 }
 .img-todo-list{
     width: 15vw;
@@ -140,7 +141,7 @@ main {
 }
 .img-emails,.img-budget-tracker{
     width: 15vw;
-    height: auto;
+    height: 22vh;
 }
 .calendar-widget,.todo-list,.emails,.notifications,.budget-tracker,.notes{
     width: 20vw;
@@ -155,7 +156,7 @@ main {
 }
 .side-bar{
     width: 20vw;
-    height: 95.2vh;
+    height: 97.6vh;
     background-color: #000000;
     z-index: 45;    
     position: absolute;
