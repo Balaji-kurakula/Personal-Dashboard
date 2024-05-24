@@ -1,21 +1,19 @@
 
-
-
-
-//function togglemenu(){
-/*    if(side-bar.style.display == "none"){
-        side-bar.style.display == "inline";
+document.addEventListener("DOMContentLoaded", function() {
+    const menubar = document.querySelector(".menu-icon");
+    
+    if (menubar) {
+        menubar.addEventListener("click", function() {
+            const sidebar = document.querySelector(".side-bar");
+            if (sidebar) {
+             sidebar.classList.toggle("active");
+            } else {
+                console.error("Sidebar element not found.");
+            }
+        });
+    } else {
+        console.error("Menubar element not found.");
     }
-    else{
-        side-bar.display == "none";
-    }
-}*/
+});
 
-menubar = document.getElementsByClassName("menu-icon")[0];
-
-menubar.onclick = function(){
-    sidebar = document.getElementsByClassName("side-bar")[0];
-    sidebar.classList.toggle("active");
-}
-
-      
+     
