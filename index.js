@@ -11,18 +11,11 @@
     }
 }*/
 
-/*menubar = document.getElementsByClassName(".menu-icon");
+menubar = document.getElementsByClassName("menu-icon")[0];
 
 menubar.onclick = function(){
-    sidebar = document.querySelector(".side-bar");
+    sidebar = document.getElementsByClassName("side-bar")[0];
     sidebar.classList.toggle("active");
-}*/
+}
 
-const sidebar = document.querySelector(".side-bar"),
-      menubtns = document.getElementsByClassName(".menu-icon"),
-      menubtns.forEach(() => {
-        sidebar.addEventListener("click", () => {
-
-        })
-      });
       

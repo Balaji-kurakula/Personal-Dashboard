@@ -129,7 +129,7 @@ main {
 }
 .img-calendar,.img-notifications{
     width: 12vw;
-    height: 22vh;
+    height: 20vh;
 }
 .img-class{
     width: 14vw;
@@ -141,7 +141,7 @@ main {
 }
 .img-emails,.img-budget-tracker{
     width: 15vw;
-    height: 22vh;
+    height: 21vh;
 }
 .calendar-widget,.todo-list,.emails,.notifications,.budget-tracker,.notes{
     width: 20vw;
